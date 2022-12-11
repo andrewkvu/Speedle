@@ -45,6 +45,7 @@ all of the words in the file of all possible 5-letter words into an ArrayList an
 word from this list as the answer for the current game.
 
 
+![image](https://user-images.githubusercontent.com/68661570/206899428-2fb827e9-47a4-496c-9704-def3eeb9f95e.png)
 
 
 
@@ -54,7 +55,8 @@ game. Specifically, the rules state that the letters revealed in uppercase are i
 
 of the answer, whereas the letters revealed in lowercase are in the word but in the wrong position
 
-of the answer. It also mentions the purpose and goal of the game.
+of the answer. It also mentions the purpose and goal of the game.![image](https://user-images.githubusercontent.com/68661570/206899442-fb556ece-d37b-4b62-a628-55a09f86d1d3.png)
+
 
 After introducing the rules, the client program prompts the user to guess the word with their
 
@@ -62,11 +64,8 @@ attempt number next to it. If the guess is invalid (not 5 letters long), the cli
 
 guess again. After the client receives a valid guess, it uses a DataOutputStream of this socket and
 
+the writeUTF method to write the guess to the server.![image](https://user-images.githubusercontent.com/68661570/206899470-731a8157-0a94-436e-aafc-13dab1a925e4.png)
 
-
-
-
-the writeUTF method to write the guess to the server.
 
 In the SpeedleServer class, there is another ClientHandler class that deals with multiple clients at
 
@@ -76,7 +75,8 @@ Runnable interface and has a run method that handles each client. Each ClientHan
 
 own DataInputStream and DataOutputStream to read information from the client and write out
 
-results to the client.
+results to the client.![image](https://user-images.githubusercontent.com/68661570/206899479-96bd325d-ed5c-4304-8249-0792a4480be0.png)
+
 
 The server reads the guess from the client and passes it to a function called getClue, which
 
@@ -84,6 +84,7 @@ calculates which letters are in correct or incorrect positions in the guess comp
 
 answer.
 
+![image](https://user-images.githubusercontent.com/68661570/206899484-9a8de010-1271-40b5-8842-d8179bdc2bb8.png)
 
 
 
@@ -98,14 +99,14 @@ server writes the guess with hints back to the client so that the client can gue
 
 this new information. The client and server keep going back and forth until someone has won or
 
+the client has reached their guess limit and has won or lost.![image](https://user-images.githubusercontent.com/68661570/206899501-e3cd1e27-00a2-4518-b563-635a6e2a439b.png)
 
-
-
-
-the client has reached their guess limit and has won or lost.
 
 In conclusion, the game runs smoothly and well.
 
+![image](https://user-images.githubusercontent.com/68661570/206899521-5a04b604-58e9-4daf-bd34-98df4a25ba71.png)
+![image](https://user-images.githubusercontent.com/68661570/206899529-45fff31d-56c5-4b38-89aa-b08a9c861737.png)
+![image](https://user-images.githubusercontent.com/68661570/206899534-3c207774-9f4a-469b-a054-5ce3b5ee6cc7.png)
 
 
 
@@ -117,10 +118,6 @@ I knew that incorporating client-server programming into Wordle would make sense
 felt that it wasn’t complex enough with just one client, which led to me attempting to have
 
 multiple clients involved in the game. It was difficult to understand, but I learned a lot from
-
-
-
-
 
 completing this project. Specifically, I learned how to recreate the functionality of Wordle, as
 
