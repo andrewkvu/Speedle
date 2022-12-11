@@ -6,6 +6,8 @@ CS 158A
 
 12/9/22
 
+https://youtu.be/d_zY65QWP_4
+
 CS158A Project Formal Report - Speedle (Speed Wordle)
 
 Wordle is a popular web game in which players have to guess a random 5-letter word by
@@ -64,7 +66,9 @@ attempt number next to it. If the guess is invalid (not 5 letters long), the cli
 
 guess again. After the client receives a valid guess, it uses a DataOutputStream of this socket and
 
-the writeUTF method to write the guess to the server.![image](https://user-images.githubusercontent.com/68661570/206899470-731a8157-0a94-436e-aafc-13dab1a925e4.png)
+the writeUTF method to write the guess to the server.
+
+![image](https://user-images.githubusercontent.com/68661570/206899470-731a8157-0a94-436e-aafc-13dab1a925e4.png)
 
 
 In the SpeedleServer class, there is another ClientHandler class that deals with multiple clients at
@@ -75,7 +79,9 @@ Runnable interface and has a run method that handles each client. Each ClientHan
 
 own DataInputStream and DataOutputStream to read information from the client and write out
 
-results to the client.![image](https://user-images.githubusercontent.com/68661570/206899479-96bd325d-ed5c-4304-8249-0792a4480be0.png)
+results to the client.
+
+![image](https://user-images.githubusercontent.com/68661570/206899479-96bd325d-ed5c-4304-8249-0792a4480be0.png)
 
 
 The server reads the guess from the client and passes it to a function called getClue, which
